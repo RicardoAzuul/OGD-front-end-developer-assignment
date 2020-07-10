@@ -1,0 +1,43 @@
+# Frontend Developer Candidate Assignment
+## IMPORTANT: You have 5 working days to finish the assignment. How to submit:
+
+1. Upload your solution to (private) Github Repository or BitBucket
+2. Invite software@ogd.nl to it so we can assess you work
+
+## Assignment
+Build a working (simple) web app that can display the balance result from the provided api server.
+
+The solution should include:
+* The account info 
+* A List of all credits and debit items
+
+## Requirements
+* The app should take all screen height 
+* The content should be horizontally centered 
+* Only the list of credit and debits should be scrollable
+* The app should work in all major browsers (latest version)
+
+Example UI:
+```
+|_______________________|  
+|   |               |   |  
+|   | Account info  |   |  
+|   |_______________|   |  
+|   |               |   |  
+|   | scrollable    |   |  
+|   | list          |   |  
+|   |               |   |  
+|   |               |   |  
+|   |               |   |  
+|   |               |   |  
+|   |               |   |  
+|___|_______________|___|
+```
+
+You can run the provided api server by running: `node apiserver/server.js`
+
+http://localhost:8080/api/getbalance will return the account info + credit and debit items considerations.
+
+The provided api server will not always return a successfull result, be aware of this! Make it easy to build and run. Tests are considered a plus.
+
+You are free to use any 3rd party components, but if you do, please provide some reasoning for it.
