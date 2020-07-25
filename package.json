@@ -1,0 +1,22 @@
+{
+  "name": "ogd-front-end-developer-assignment",
+  "version": "1.0.0",
+  "description": "\"Get account info from server API\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RicardoAzuul/OGD-front-end-developer-assignment.git"
+  },
+  "author": "Richard Blaauw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment/issues"
+  },
+  "homepage": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
