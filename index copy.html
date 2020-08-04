@@ -7,7 +7,9 @@
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-        <title>Check your account!</title>
+
+
+        <title>Account Balance</title>
         <style>
             .center {
               margin: auto;
@@ -19,11 +21,19 @@
     </head>
     <body>
         <div class="center">
-            <h1>Welcome Ivo!</h1>
-            <h2>Would you like to check the balance of your account?</h2>
-            <button type="button" class="btn btn-success">Yes, please!</button>
-            <button type="button" class="btn btn-danger">Nah, I'm good!</button>
-            
+            <h1>Account information</h1>
+            <h2>Name: [name here]</h2>
+            <h2>Iban: [Iban here]</h2>
+            <h2>Balance: [balance here]</h2>
         </div>
-     </body>
+        <hr>
+        <div class="center">
+            <h1>Scrollable list of credit and debit items</h1>
+            <h2>To/From: [To/from here]</h2>
+            <h2>Description: [amount here]</h2>
+            <h2>Amount: [amount here. Maybe + or - depending on to or from?]</h2>
+            <h2>Date: [date here. Needs to be converted into human readable date]</h2>
+        </div>
+        <script src="index.js"></script>
+    </body>
 </html>
