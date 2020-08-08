@@ -6,8 +6,12 @@ async function getAccountInfo() {
     const data = await response.json();
     // const { name } = data;
     
-    document.getElementById('name').textContent = data.account.name
-    console.log(data);
+    document.getElementById('name').textContent = data.account.name;
+    document.getElementById('iban').textContent = data.account.iban;
+    document.getElementById('balance').textContent = data.account.balance;
+    document.getElementById('currency').textContent = data.currency;
+
+    console.log(data.debitsAndCredits.length);
 }
 
 getAccountInfo();
