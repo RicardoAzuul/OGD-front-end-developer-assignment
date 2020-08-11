@@ -8,31 +8,50 @@
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
         <title>Account Balance</title>
-        <style>
+<!--         <style>
             .center {
               margin: auto;
               width: 60%;
               border: 3px solid #73AD21;
               padding: 10px;
             }
-            </style>
+            </style> -->
     </head>
     <body>
-        <div class="center">
+            <div class="container">
+                    <div class="row">
+                      <div class="col-sm"></div>
+                      <div class="col-11">
+                                    <!-- TODO: turn this into a table for better outlining -->
+                        <h1>Account information</h1>
+                        <p><b>Name: </b><span id="name"></span></p>
+                        <p><b>IBAN: </b><span id="iban"></span></p>
+                        <p><b>Balance: </b><span id="balance"></span> <span id="currency"></span></p>
+                        <br>
+                        <h1>Scrollable list of credit and debit items</h1>
+                        <p>To/From: [To/from here]</p>
+                        <p><b>Description: </b>[description here]</p>
+                        <p><b>Amount: </b>[amount here. Maybe + or - depending on to or from?]</p>
+                        <p><b>Date:</b>[date here. Needs to be converted into human readable date]</p>
+                      </div>
+                      <div class="col-sm"></div>
+                    </div>
+                  </div>
+        <!-- <div class="center"> -->
             <!-- TODO: turn this into a table for better outlining -->
-            <h1>Account information</h1>
-            <h2>Name: <span id="name"></span></h2>
-            <h2>IBAN: <span id="iban"></span></h2>
-            <h2>Balance: <span id="balance"></span> <span id="currency"></span></h2>
+<!--             <h1>Account information</h1>
+            <p>Name: <span id="name"></span></p>
+            <p>IBAN: <span id="iban"></span></p>
+            <p>Balance: <span id="balance"></span> <span id="currency"></span></p>
         </div>
         <hr>
         <div class="center">
             <h1>Scrollable list of credit and debit items</h1>
-            <h2>To/From: [To/from here]</h2>
-            <h2>Description: [amount here]</h2>
-            <h2>Amount: [amount here. Maybe + or - depending on to or from?]</h2>
-            <h2>Date: [date here. Needs to be converted into human readable date]</h2>
-        </div>
+            <p>To/From: [To/from here]</p>
+            <p>Description: [amount here]</p>
+            <p>Amount: [amount here. Maybe + or - depending on to or from?]</p>
+            <p>Date: [date here. Needs to be converted into human readable date]</p>
+        </div> -->
         <script src="app.js"></script>
     </body>
 </html>
