@@ -6,6 +6,7 @@
 
         <!-- Bootstrap CSS -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="main.css">
 
         <title>Account Balance</title>
 <!--         <style>
@@ -27,15 +28,24 @@
                         <p><b>Name: </b><span id="name"></span></p>
                         <p><b>IBAN: </b><span id="iban"></span></p>
                         <p><b>Balance: </b><span id="balance"></span> <span id="currency"></span></p>
-                        <br>
-                        <h1>Scrollable list of credit and debit items</h1>
-                        <p>To/From: [To/from here]</p>
-                        <p><b>Description: </b>[description here]</p>
-                        <p><b>Amount: </b>[amount here. Maybe + or - depending on to or from?]</p>
-                        <p><b>Date:</b>[date here. Needs to be converted into human readable date]</p>
                       </div>
                       <div class="col-sm"></div>
                     </div>
+                    <div class="row">
+                      <div class="col-sm"></div>
+                      <div class="col-11">
+                          <h1>Scrollable list of credit and debit items</h1>
+                          <table id="debitsAndCredits">
+                            <tr>
+                              <th>Name</th>
+                              <th>Description</th>
+                              <th>Amount</th>
+                              <th>Date</th>
+                            </tr>
+                          </table>
+                      </div>
+                      <div class="col-sm"></div>
+                    </div>          
                   </div>
         <!-- <div class="center"> -->
             <!-- TODO: turn this into a table for better outlining -->

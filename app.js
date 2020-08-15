@@ -7,31 +7,61 @@ async function getAccountInfo() {
         console.log('Service unavailable');
     }
     const data = await response.json();
-    // We need to check for unavailability of the service
-    const status = await response.status;
-    // const { name } = data;
     
     document.getElementById('name').textContent = data.account.name;
     document.getElementById('iban').textContent = data.account.iban;
     document.getElementById('balance').textContent = data.account.balance;
     document.getElementById('currency').textContent = data.currency;
 
-    // There are 8 money transfers, so for each of those 8 we need to:
-        // display either to or from
-            // --> if to, perhaps add a minus symbol to the amount, to indicate that it was money spent, not earned
-        // display description
-        // display amount
-            // add EURO to this using currency as above
-        // display date
-            // --> date needs to be human readable
-            // --> probably sort by date as well --> nope, JSON data is already most recently first
+    // TODO There are 8 money transfers, so for each of those 8 we need to:
+        // TODO display either to or from
+            // TODO --> if to, perhaps add a minus symbol to the amount, to indicate that it was money spent, not earned
+        // TODO display description
+        // TODO display amount
+            // TODO add EURO to this using currency as above
+        // TODO display date
+            // TODO --> date needs to be human readable
+            // TODO --> probably sort by date as well --> nope, JSON data is already most recently first
 
-    
+    // for each item in the object containing the debits and credits: 
+    // document.body.appendChild --> https://www.w3schools.com/jsref/met_node_appendchild.asp
 
+/*     <p>The value of "firstName" is:</p>
 
-    console.log(data.debitsAndCredits.length);
-    console.log(status);
-    console.log(response);
+<p id="demo"></p>
+
+<script>
+var obj = JSON.parse('{"firstName":"John", "lastName":"Doe"}');
+
+document.getElementById("demo").innerHTML = obj.firstName;
+ */
+
+    for (const item of data.debitsAndCredits) {
+        var itemEntries = Object.entries(item); // this object has a length, so can be iterated
+        var tablerow = document.createElement("TR");
+        for (const entry of itemEntries) {
+            var entryDescription = entry[0]; //we will use this to check where to put entryValue
+            var entryValue = entry[1];
+            var tablecell = document.createElement("TD");
+            var text = document.createTextNode(entryValue);
+            tablecell.appendChild(text);
+            tablerow.appendChild(tablecell);
+                 
+        }
+        document.getElementById("debitsAndCredits").appendChild(tablerow);
+
+        //var para = document.createElement("P");
+        //var elementToString = JSON.stringify(element); // this turns the element into a string (in JSON format)
+        //console.log(elementToString);
+        //var elementStringParsed = JSON.parse(elementToString); // this turns the string (back?) into a JSON object
+        //console.log(elementStringParsed);
+        //console.log(elementStringParsed.length);                       
+        //var text = document.createTextNode(JSON.stringify(element));     
+        //para.appendChild(text);                                          
+        //document.getElementById("debitsAndCredits").appendChild(para);
+
+    }
+
 }
 
 getAccountInfo();
