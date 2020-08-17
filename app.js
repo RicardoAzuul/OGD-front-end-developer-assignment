@@ -39,14 +39,26 @@ document.getElementById("demo").innerHTML = obj.firstName;
     for (const item of data.debitsAndCredits) {
         var itemEntries = Object.entries(item); // this object has a length, so can be iterated
         var tablerow = document.createElement("TR");
+        
+        // each item has 4 entries, consisting of key value pairs. So we create a counter, and once that counter hits certain numbers, we do something: 
+        // the order of key value pairs is always the same
+        var entrypaircounter = 0;
         for (const entry of itemEntries) {
-            var entryDescription = entry[0]; //we will use this to check where to put entryValue
-            var entryValue = entry[1];
+            var entryDescription = entry[0]; //we will use this to check if we need to do anything to entryValue
+            // we assume the third entry is always the currency amount, regardless of its key (amount or debit)
+            if (entrypaircounter === 2) {
+                var entryValue = entry[1] + " " + data.currency;
+                console.log(entryValue);
+            }
+            else {
+                var entryValue = entry[1];
+            }
             var tablecell = document.createElement("TD");
             var text = document.createTextNode(entryValue);
             tablecell.appendChild(text);
             tablerow.appendChild(tablecell);
-                 
+            entrypaircounter ++;
+            console.log(entrypaircounter);     
         }
         document.getElementById("debitsAndCredits").appendChild(tablerow);
 

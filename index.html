@@ -25,6 +25,22 @@
                       <div class="col-11">
                                     <!-- TODO: turn this into a table for better outlining -->
                         <h1>Account information</h1>
+                        <table class="table">
+                          <tbody>
+                            <tr>
+                              <th scope="row">Name</th>
+                              <td>Mark</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">IBAN</th>
+                              <td>asdf</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">Balance</th>
+                              <td>Larry</td>
+                            </tr>
+                          </tbody>
+                        </table>
                         <p><b>Name: </b><span id="name"></span></p>
                         <p><b>IBAN: </b><span id="iban"></span></p>
                         <p><b>Balance: </b><span id="balance"></span> <span id="currency"></span></p>
@@ -35,7 +51,7 @@
                       <div class="col-sm"></div>
                       <div class="col-11">
                           <h1>Scrollable list of credit and debit items</h1>
-                          <table id="debitsAndCredits">
+                          <table class="table table-striped" id="debitsAndCredits">
                             <tr>
                               <th>Name</th>
                               <th>Description</th>
