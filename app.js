@@ -43,12 +43,22 @@ document.getElementById("demo").innerHTML = obj.firstName;
         // each item has 4 entries, consisting of key value pairs. So we create a counter, and once that counter hits certain numbers, we do something: 
         // the order of key value pairs is always the same
         var entrypaircounter = 0;
+        var deduction = false;
         for (const entry of itemEntries) {
             var entryDescription = entry[0]; //we will use this to check if we need to do anything to entryValue
+            if (entryDescription === "to") {
+                var deduction = true;
+            }
             // we assume the third entry is always the currency amount, regardless of its key (amount or debit)
             if (entrypaircounter === 2) {
-                var entryValue = entry[1] + " " + data.currency;
-                console.log(entryValue);
+                
+                if (deduction === true) {
+                    var entryValue = "-" + entry[1] + " " + data.currency;
+                }
+                else {
+                    var entryValue = entry[1] + " " + data.currency;
+                }
+                                
             }
             else {
                 var entryValue = entry[1];
