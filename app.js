@@ -51,36 +51,43 @@ document.getElementById("demo").innerHTML = obj.firstName;
             }
             // we assume the third entry is always the currency amount, regardless of its key (amount or debit)
             if (entrypaircounter === 2) {
-                
+
                 if (deduction === true) {
                     var entryValue = "-" + entry[1] + " " + data.currency;
+                    var deduction = false;
                 }
                 else {
                     var entryValue = entry[1] + " " + data.currency;
                 }
                                 
             }
+
+            else if (entrypaircounter === 3) {
+                // the fourth entry is the date. The string is not very readable
+                var entryToDateObject = new Date(entry[1]);
+                // we want the date, the month, the year and the time
+                // TODO instead of the below, just modify 2016-01-08T08:14:00.000Z to remove the T and get rid off 00.000Z
+                var entryDate = entryToDateObject.getDate();
+                var entryMonth = entryToDateObject.getMonth();
+                var entryMonth = entryMonth + 1;
+                var entryYear = entryToDateObject.getFullYear();
+                var entryHours = entryToDateObject.getHours();
+                var entryMinutes =entryToDateObject.getMinutes();
+                var entryValue = entryDate + "-" + entryMonth + "-" + entryYear + " " + entryHours + ":" + entryMinutes;
+            }
+
             else {
                 var entryValue = entry[1];
             }
+
             var tablecell = document.createElement("TD");
             var text = document.createTextNode(entryValue);
             tablecell.appendChild(text);
             tablerow.appendChild(tablecell);
             entrypaircounter ++;
-            console.log(entrypaircounter);     
+
         }
         document.getElementById("debitsAndCredits").appendChild(tablerow);
-
-        //var para = document.createElement("P");
-        //var elementToString = JSON.stringify(element); // this turns the element into a string (in JSON format)
-        //console.log(elementToString);
-        //var elementStringParsed = JSON.parse(elementToString); // this turns the string (back?) into a JSON object
-        //console.log(elementStringParsed);
-        //console.log(elementStringParsed.length);                       
-        //var text = document.createTextNode(JSON.stringify(element));     
-        //para.appendChild(text);                                          
-        //document.getElementById("debitsAndCredits").appendChild(para);
 
     }
 
