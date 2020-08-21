@@ -13,29 +13,6 @@ async function getAccountInfo() {
     document.getElementById('balance').textContent = data.account.balance;
     document.getElementById('currency').textContent = data.currency;
 
-    // TODO There are 8 money transfers, so for each of those 8 we need to:
-        // TODO display either to or from
-            // TODO --> if to, perhaps add a minus symbol to the amount, to indicate that it was money spent, not earned
-        // TODO display description
-        // TODO display amount
-            // TODO add EURO to this using currency as above
-        // TODO display date
-            // TODO --> date needs to be human readable
-            // TODO --> probably sort by date as well --> nope, JSON data is already most recently first
-
-    // for each item in the object containing the debits and credits: 
-    // document.body.appendChild --> https://www.w3schools.com/jsref/met_node_appendchild.asp
-
-/*     <p>The value of "firstName" is:</p>
-
-<p id="demo"></p>
-
-<script>
-var obj = JSON.parse('{"firstName":"John", "lastName":"Doe"}');
-
-document.getElementById("demo").innerHTML = obj.firstName;
- */
-
     for (const item of data.debitsAndCredits) {
         var itemEntries = Object.entries(item); // this object has a length, so can be iterated
         var tablerow = document.createElement("TR");
@@ -51,29 +28,41 @@ document.getElementById("demo").innerHTML = obj.firstName;
             }
             // we assume the third entry is always the currency amount, regardless of its key (amount or debit)
             if (entrypaircounter === 2) {
+                // some of the entries have just 1 digit after the decimal: we need to add a 0
+                // TODO there is one entry with no digits after decimal
+                var entryValueString = entry[1] + "";
+                var decimalIndex = entryValueString.indexOf('.') + 1;
 
+                if (decimalIndex === 0) {
+                    var entryValue = entry[1] + ".00";
+                }
+                else {
+                    var digitsAfterDecimal = entryValueString.slice(decimalIndex);
+
+                    if (digitsAfterDecimal.length < 2) {
+                        var entryValue = entry[1] + "0";
+                    }
+                    else {
+                        var entryValue = entry[1]; 
+                    }
+                }
+        
                 if (deduction === true) {
-                    var entryValue = "-" + entry[1] + " " + data.currency;
+                    var entryValue = "-" + entryValue + " " + data.currency;
                     var deduction = false;
                 }
                 else {
-                    var entryValue = entry[1] + " " + data.currency;
+                    var entryValue = entryValue + " " + data.currency;
                 }
                                 
             }
 
             else if (entrypaircounter === 3) {
-                // the fourth entry is the date. The string is not very readable
-                var entryToDateObject = new Date(entry[1]);
-                // we want the date, the month, the year and the time
-                // TODO instead of the below, just modify 2016-01-08T08:14:00.000Z to remove the T and get rid off 00.000Z
-                var entryDate = entryToDateObject.getDate();
-                var entryMonth = entryToDateObject.getMonth();
-                var entryMonth = entryMonth + 1;
-                var entryYear = entryToDateObject.getFullYear();
-                var entryHours = entryToDateObject.getHours();
-                var entryMinutes =entryToDateObject.getMinutes();
-                var entryValue = entryDate + "-" + entryMonth + "-" + entryYear + " " + entryHours + ":" + entryMinutes;
+                var entryToDateString = entry[1];
+                // the fourth entry is the datetime of the entry. We want the date, the month, the year and the time
+                var entryToDateString = entryToDateString.replace("T", " ");
+                var entryToDateString = entryToDateString.replace(":00.000Z", "");
+                var entryValue = entryToDateString;
             }
 
             else {
