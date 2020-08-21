@@ -4,7 +4,7 @@ async function getAccountInfo() {
     // TODO: Add check for when the API does not return data
     const response = await fetch(account_info_api_url);
     if (response.ok !== true) {
-        console.log('Service unavailable');
+        location.replace("error.html");
     }
     const data = await response.json();
     
