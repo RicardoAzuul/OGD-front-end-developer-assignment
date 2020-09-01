@@ -3,9 +3,50 @@ const account_info_api_url = 'http://localhost:8080/api/getbalance';
 async function getAccountInfo() {
     // TODO: Add check for when the API does not return data
     const response = await fetch(account_info_api_url);
-    if (response.ok !== true) {
-        location.replace("error.html");
+    if (!response.ok) {
+        const responseStatus = response.status;
+        const responseStatusText = response.statusText;
+        const responseURL = response.url;
+
+        // loading another html page meant losing the response data, so we're clearing the page instead
+        document.getElementById('accountInformation').innerHTML = "";
+        document.getElementById('transactions').innerHTML = "";
+
+        // here we add all the error info together in order to append it to the html
+        var header1 = document.createElement("H1");
+        var text = document.createTextNode("Apologies!");
+        header1.appendChild(text);
+        document.getElementById("accountInformation").appendChild(header1);
+
+        var linebreak = document.createElement("BR");
+        document.getElementById("accountInformation").appendChild(linebreak);
+
+        var paragraph = document.createElement("P");
+        var text = document.createTextNode("We are unable to show your account balance at this time.");
+        paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(paragraph);
+
+        var paragraph = document.createElement("P");
+        var text = document.createTextNode("HTTP status code: " + responseStatus);
+        paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(paragraph);
+
+        var paragraph = document.createElement("P");
+        var text = document.createTextNode("HTTP status text: " + responseStatusText);
+        paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(paragraph);
+
+        var paragraph = document.createElement("P");
+        var text = document.createTextNode("URL: " + responseURL);
+        paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(paragraph);
+
+
+        console.log(responseStatus);
+        console.log(responseStatusText);
+        console.log(responseURL);      
     }
+
     const data = await response.json();
     
     document.getElementById('name').textContent = data.account.name;
@@ -29,7 +70,6 @@ async function getAccountInfo() {
             // we assume the third entry is always the currency amount, regardless of its key (amount or debit)
             if (entrypaircounter === 2) {
                 // some of the entries have just 1 digit after the decimal: we need to add a 0
-                // TODO there is one entry with no digits after decimal
                 var entryValueString = entry[1] + "";
                 var decimalIndex = entryValueString.indexOf('.') + 1;
 
