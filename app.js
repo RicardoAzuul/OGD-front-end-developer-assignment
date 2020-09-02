@@ -26,20 +26,29 @@ async function getAccountInfo() {
         paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(paragraph);
 
-        var paragraph = document.createElement("P");
+        var linebreak = document.createElement("BR");
+        document.getElementById("accountInformation").appendChild(linebreak);
+
+        // var paragraph = document.createElement("P");
         var text = document.createTextNode("HTTP status code: " + responseStatus);
-        paragraph.appendChild(text);
-        document.getElementById("accountInformation").appendChild(paragraph);
+        //paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(text);
 
-        var paragraph = document.createElement("P");
+        var linebreak = document.createElement("BR");
+        document.getElementById("accountInformation").appendChild(linebreak);
+
+        //var paragraph = document.createElement("P");
         var text = document.createTextNode("HTTP status text: " + responseStatusText);
-        paragraph.appendChild(text);
-        document.getElementById("accountInformation").appendChild(paragraph);
+        //paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(text);
 
-        var paragraph = document.createElement("P");
+        var linebreak = document.createElement("BR");
+        document.getElementById("accountInformation").appendChild(linebreak);
+
+        //var paragraph = document.createElement("P");
         var text = document.createTextNode("URL: " + responseURL);
-        paragraph.appendChild(text);
-        document.getElementById("accountInformation").appendChild(paragraph);
+        //paragraph.appendChild(text);
+        document.getElementById("accountInformation").appendChild(text);
 
 
         console.log(responseStatus);
