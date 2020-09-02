@@ -7,6 +7,11 @@ async function getAccountInfo() {
         const responseStatusText = response.statusText;
         const responseURL = response.url;
 
+        function addLineBreak() {
+            var linebreak = document.createElement("BR");
+            document.getElementById("accountInformation").appendChild(linebreak);
+        }
+
         // loading another html page meant losing the response data, so we're clearing the page instead
         document.getElementById('accountInformation').innerHTML = "";
         var element = document.getElementById('transactions');
@@ -18,37 +23,30 @@ async function getAccountInfo() {
         header1.appendChild(text);
         document.getElementById("accountInformation").appendChild(header1);
 
-        var linebreak = document.createElement("BR");
-        document.getElementById("accountInformation").appendChild(linebreak);
+        addLineBreak();
 
         var paragraph = document.createElement("P");
         var text = document.createTextNode("We are unable to show your account balance at this time.");
         paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(paragraph);
 
-        var linebreak = document.createElement("BR");
-        document.getElementById("accountInformation").appendChild(linebreak);
+        addLineBreak();
 
-        // var paragraph = document.createElement("P");
         var text = document.createTextNode("HTTP status code: " + responseStatus);
-        //paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(text);
 
-        var linebreak = document.createElement("BR");
-        document.getElementById("accountInformation").appendChild(linebreak);
+        addLineBreak();
 
-        //var paragraph = document.createElement("P");
         var text = document.createTextNode("HTTP status text: " + responseStatusText);
-        //paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(text);
 
-        var linebreak = document.createElement("BR");
-        document.getElementById("accountInformation").appendChild(linebreak);
+        addLineBreak();
 
-        //var paragraph = document.createElement("P");
         var text = document.createTextNode("URL: " + responseURL);
-        //paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(text);
+
+        addLineBreak();
+        addLineBreak();
   
     }
 
