@@ -9,7 +9,8 @@ async function getAccountInfo() {
 
         // loading another html page meant losing the response data, so we're clearing the page instead
         document.getElementById('accountInformation').innerHTML = "";
-        document.getElementById('transactions').innerHTML = "";
+        var element = document.getElementById('transactions');
+        element.parentNode.removeChild(element);
 
         // here we add all the error info together in order to append it to the html
         var header1 = document.createElement("H1");
