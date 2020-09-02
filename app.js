@@ -49,11 +49,7 @@ async function getAccountInfo() {
         var text = document.createTextNode("URL: " + responseURL);
         //paragraph.appendChild(text);
         document.getElementById("accountInformation").appendChild(text);
-
-
-        console.log(responseStatus);
-        console.log(responseStatusText);
-        console.log(responseURL);      
+  
     }
 
     const data = await response.json();
