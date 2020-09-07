@@ -47,6 +47,15 @@ async function getAccountInfo() {
 
         addLineBreak();
         addLineBreak();
+
+        var anchor = document.createElement('a');
+        var text = document.createTextNode("Try again");
+        anchor.appendChild(text);
+        anchor.href = "index.html";
+        document.getElementById("accountInformation").appendChild(anchor);
+
+        addLineBreak();
+        addLineBreak();
   
     }
 

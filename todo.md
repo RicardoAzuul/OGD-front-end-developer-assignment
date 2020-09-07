@@ -1,8 +1,8 @@
-[] Get account info
-[] Get all credit and debit items
+[x] Get account info
+[x] Get all credit and debit items
 [] Use the entire screen height for displaying
-[] Center content horizontally
-[] Make list of credit and debit items scrollable
+[x] Center content horizontally
+[x] Make list of credit and debit items scrollable
 [] App should work in all major browsers (latest version): Chrome, Firefox, Edge. IE? Brave? Vivaldi? Safari!
 
 

@@ -11,14 +11,15 @@
         <title>Account Balance</title>
     </head>
     <body>
-            <div class="container">
+      <!-- TODO Use full screen height -->
+            <div class="container-fluid">
                 <div style="height: 150px; background-color: rgb(255, 255, 255);"></div>
               <div class="row">
                 <div class="col-xl"></div>
               </div>
                     <div class="row">
-                      <div class="col-sm"></div>
-                      <div class="col-11" id="accountInformation">
+                      <div class="col-2"></div>
+                      <div class="col-8" id="accountInformation">
                         <h1>Account information</h1>
                         <table class="table w-auto">
                           <tbody>
@@ -37,11 +38,11 @@
                           </tbody>
                         </table>
                       </div>
-                      <div class="col-sm"></div>
+                      <div class="col-2"></div>
                     </div>
                     <div class="row">
-                      <div class="col-sm"></div>
-                      <div class="col-11" id="transactions">
+                      <div class="col-2"></div>
+                      <div class="col-8" id="transactions">
                           <h1>Transactions</h1>
                           <div class="pre-scrollable">
                             <table class="table table-striped" id="debitsAndCredits">
@@ -54,9 +55,8 @@
                             </table>
                           </div>
                       </div>
-                      <div class="col-sm"></div>
-                    </div>
-                    <div style="height: 150px; background-color: rgb(255, 255, 255)"></div>          
+                      <div class="col-2"></div>
+                    </div>       
                   </div>
         <script src="app.js"></script>
     </body>
