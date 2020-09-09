@@ -12,54 +12,54 @@
     </head>
     <body>
       <!-- TODO Use full screen height -->
-            <div class="container-fluid">
-                <div style="height: 7em; background-color: rgb(255, 255, 255);"></div>
-                    <div class="row ">
-                      <div class="col-2"></div>
-                      <div class="col-8" id="accountInformation">
-                        <br>
-                        <h1>Account information</h1>
-                        <br><br>
-                        <table class="table w-auto">
-                          <tbody>
-                            <tr>
-                              <th scope="row">Name</th>
-                              <td><span id="name"></span></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">IBAN</th>
-                              <td><span id="iban"></span></td>
-                            </tr>
-                            <tr>
-                              <th scope="row">Balance</th>
-                              <td><span id="balance"></span> <span id="currency"></span></td>
-                            </tr>
-                          </tbody>
-                        </table>
-                        <br>
-                      </div>
-                      <div class="col-2"></div>
-                    </div>
-                    <div class="row">
-                      <div class="col-2"></div>
-                      <div class="col-8" id="transactions">
-                        <br>
-                          <h1>Transactions</h1>
-                          <br><br>
-                          <div class="pre-scrollable">
-                            <table class="table table-striped" id="debitsAndCredits">
-                              <tr>
-                                <th>To/From</th>
-                                <th>Description</th>
-                                <th>Amount</th>
-                                <th>Date</th>
-                              </tr>
-                            </table>
-                          </div>
-                      </div>
-                      <div class="col-2"></div>
-                    </div>       
-                  </div>
-        <script src="app.js"></script>
+      <div class="container-fluid">
+        <div class="row" id="topRow"></div>
+        <div class="row" id="accountInformationRow">
+          <div class="col-2"></div>
+          <div class="col-8" id="accountInformation">
+            <br>
+            <h1>Account information</h1>
+            <br><br>
+            <table class="table w-auto">
+              <tbody>
+                <tr>
+                  <th scope="row">Name</th>
+                  <td><span id="name"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">IBAN</th>
+                  <td><span id="iban"></span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Balance</th>
+                  <td><span id="balance"></span> <span id="currency"></span></td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+          </div>
+          <div class="col-2"></div>
+        </div>
+        <div class="row" id="transactionsRow">
+          <div class="col-2"></div>
+          <div class="col-8" id="transactions">
+            <br>
+            <h1>Transactions</h1>
+            <br><br>
+              <div class="pre-scrollable">
+                <table class="table table-striped" id="debitsAndCredits">
+                  <tr>
+                    <th>To/From</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="col-2"></div>
+          </div>       
+        </div>
+      <script src="app.js"></script>
     </body>
 </html>
