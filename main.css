@@ -8,7 +8,7 @@ html, body {
 }
 #topRow {
   height: 10%;
-  background-color: rgb(255, 255, 255);
+  background-color: #FF6200;
 }
 #accountInformationRow {
   height: 30%;
@@ -21,4 +21,5 @@ html, body {
 .col-8 {
   border-style: solid;
   border-color: #FF6200;
+  border-top: none;
 }
