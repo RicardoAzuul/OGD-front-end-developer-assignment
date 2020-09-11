@@ -11,11 +11,11 @@ html, body {
   background-color: rgb(255, 255, 255);
 }
 #accountInformationRow {
-  height: 20%;
+  height: 30%;
   margin: 0px;
 }
 #transactionsRow {
-  height: 70%;
+  height: 60%;
   margin: 0px;
 }
 .col-8 {
