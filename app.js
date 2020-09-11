@@ -16,6 +16,8 @@ async function getAccountInfo() {
         document.getElementById('accountInformation').innerHTML = "";
         var element = document.getElementById('transactions');
         element.parentNode.removeChild(element);
+        
+        addLineBreak();
 
         // here we add all the error info together in order to append it to the html
         var header1 = document.createElement("H1");
