@@ -18,7 +18,5 @@
     "url": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment/issues"
   },
   "homepage": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment#readme",
-  "dependencies": {
-    "request": "^2.88.2"
-  }
+  "dependencies": {}
 }
