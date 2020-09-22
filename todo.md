@@ -1,9 +1,12 @@
 [x] Get account info
 [x] Get all credit and debit items
-[] Use the entire screen height for displaying
+[x] Use the entire screen height for displaying
 [x] Center content horizontally
 [x] Make list of credit and debit items scrollable
-[] App should work in all major browsers (latest version): Chrome, Firefox, Edge. IE? Brave? Vivaldi? Safari!
+[] App should work in all major browsers (latest version): Chrome, Firefox, Edge. IE? Brave? Vivaldi? Safari! Is this testable?
+[] The provided api server will not always return a successfull result, be aware of this! Make it easy to build and run. 
+[] Tests are considered a plus.
+
 
 
 Example UI:
