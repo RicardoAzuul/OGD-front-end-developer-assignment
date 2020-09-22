@@ -4,7 +4,8 @@
   "description": "\"Get account info from server API\"",
   "main": "index.js",
   "scripts": {
-    "build": "",
+    "build-css": "",
+    "build-js": "",
     "start": "node apiserver\\server.js && start index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
