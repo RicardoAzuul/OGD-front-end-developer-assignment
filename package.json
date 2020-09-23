@@ -4,9 +4,9 @@
   "description": "\"Get account info from server API\"",
   "main": "index.js",
   "scripts": {
-    "build-css": "",
-    "build-js": "node minify app.js > build\\js\\script.min.js",
-    "build": "npm run build-js",
+    "build-css": "minify main.css > build\\css\\style.min.css",
+    "build-js": "minify app.js > build\\js\\script.min.js",
+    "build": "npm run build-css && npm run build-js",
     "start": "node apiserver\\server.js && start index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
