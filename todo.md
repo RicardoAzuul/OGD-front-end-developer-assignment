@@ -3,9 +3,9 @@
 [x] Use the entire screen height for displaying
 [x] Center content horizontally
 [x] Make list of credit and debit items scrollable
+[x] Don't use minify: reviewer has to be able to review the code
 [] App should work in all major browsers (latest version): Chrome, Firefox, Edge. IE? Brave? Vivaldi? Safari! Is this testable?
 [] The provided api server will not always return a successfull result, be aware of this! Make it easy to build and run. 
-[] Don't use minify: reviewer has to be able to review the code
 [] Tests are considered a plus.
 
 
