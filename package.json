@@ -5,6 +5,7 @@
   "main": "app.js",
   "scripts": {
     "build-css": "copy main.css build\\css\\main.css",
+    "build-html": "copy index.html build\\index.html",
     "build-js": "copy app.js build\\js\\app.js",
     "build": "npm run build-css && npm run build-js",
     "start": "node apiserver\\server.js && start index.html",
