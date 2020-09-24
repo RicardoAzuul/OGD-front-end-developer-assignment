@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+}
+.container-fluid {
+  height: 100%;
+  margin: 0px;
+}
+#topRow {
+  height: 10%;
+  background-color: #FF6200;
+}
+#accountInformationRow {
+  height: 30%;
+  margin: 0px;
+}
+#transactionsRow {
+  height: 60%;
+  margin: 0px;
+}
+.col-8 {
+  border-style: solid;
+  border-color: #FF6200;
+  border-top: none;
+}

@@ -2,10 +2,10 @@
   "name": "ogd-front-end-developer-assignment",
   "version": "1.0.0",
   "description": "\"Get account info from server API\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "build-css": "minify main.css > build\\css\\style.min.css",
-    "build-js": "minify app.js > build\\js\\script.min.js",
+    "build-css": "copy main.css build\\css\\main.css",
+    "build-js": "copy app.js build\\js\\app.js",
     "build": "npm run build-css && npm run build-js",
     "start": "node apiserver\\server.js && start index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
