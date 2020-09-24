@@ -22,5 +22,8 @@
   },
   "homepage": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment#readme",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.1.3"
+  }
 }
