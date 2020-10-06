@@ -8,6 +8,8 @@
 [] The provided api server will not always return a successfull result, be aware of this! Make it easy to build and run. 
 [] Tests are considered a plus.
 
+https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai
+https://mochajs.org/
 
 
 Example UI:

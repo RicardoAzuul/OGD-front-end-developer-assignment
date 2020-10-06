@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/main.css">
+
+        <title>Account Balance</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="row" id="topRow"></div>
+          <div class="row" id="accountInformationRow">
+            <div class="col-2"></div>
+            <div class="col-8" id="accountInformation">
+              <br>
+              <h1>Account information</h1>
+              <br>
+              <table class="table w-auto">
+                <tbody>
+                  <tr>
+                    <th scope="row">Name</th>
+                    <td><span id="name"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">IBAN</th>
+                    <td><span id="iban"></span></td>
+                  </tr>
+                  <tr>
+                    <th scope="row">Balance</th>
+                    <td><span id="balance"></span> <span id="currency"></span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="col-2"></div>
+          </div>
+          <div class="row" id="transactionsRow">
+              <div class="col-2"></div>
+              <div class="col-8" id="transactions">
+                <br>
+                <h1>Transactions</h1>
+                <br>
+                <div class="pre-scrollable">
+                  <table class="table table-striped" id="debitsAndCredits">
+                    <tr>
+                      <th>To/From</th>
+                      <th>Description</th>
+                      <th>Amount</th>
+                      <th>Date</th>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              <div class="col-2"></div>
+          </div>
+        </div>
+      <script src="js/app.js"></script>
+    </body>
+</html>

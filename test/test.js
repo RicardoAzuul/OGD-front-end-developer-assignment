@@ -1,9 +1,29 @@
 var expect  = require('chai').expect;
 var request = require('request');
 
-it('API', function(done) {
-    request('http://localhost:8080/api/getbalance' , function(error, response, body) {
-        expect(body).to.contain("account");
-        done();
+describe ('API', function() {
+    it('status', function(done){
+        request('http://localhost:8080/api/getbalance', function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            done();
+        });
+    });
+});
+
+describe ('Account Info', function() {
+    it('status', function(done){
+        request('http://localhost:8080/api/getbalance', function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            done();
+        });
+    });
+});
+
+describe ('Transactions', function() {
+    it('status', function(done){
+        request('http://localhost:8080/api/getbalance', function(error, response, body) {
+            expect(response.statusCode).to.equal(200);
+            done();
+        });
     });
 });
