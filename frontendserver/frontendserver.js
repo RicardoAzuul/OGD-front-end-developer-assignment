@@ -1,24 +1,15 @@
-var http = require('http');
-var page = require('./index.html');
-var port = 80;
+const express = require('express')
+const app = express()
+const port = 3000
 
-var server = http.createServer(function(req, res) {
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Request-Method', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'OPTIONS, GET');
-    res.setHeader('Access-Control-Allow-Headers', '*');
+app.use(express.static('build'))
 
-    if (req.url === '/accountbalance') {
+app.get('/', (req, res) => {
+    res.setHeader("Content-Type", "text/html");
+    res.writeHead(200);
+    res.end(contents);
+})
 
-
-            res.writeHead(200, {"Content-Type": "text/html"});
-            //res.write(page);
-            //res.write(JSON.stringify(result, 0, 4));
-            res.end();
-
-    } 
-});
-
-server.listen(port, function(){
-    console.log("Server listening on: http://localhost:%s", port);
-});
+app.listen(port, () => {
+  console.log(`Frontendserver listening at http://localhost:${port}`)
+})

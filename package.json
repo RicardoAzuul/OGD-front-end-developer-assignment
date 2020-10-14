@@ -5,11 +5,11 @@
   "main": "app.js",
   "scripts": {
     "build-css": "copy main.css build\\css\\main.css",
-    "build-frontendserver": "copy frontendserver\\*.* build\\frontendserver\\*.*", 
+    "build-frontendserver": "copy frontendserver\\*.* build\\*.*",
     "build-js": "copy app.js build\\js\\app.js",
     "build": "npm run build-css && npm run build-frontendserver && npm run build-js",
     "start-api": "node apiserver\\server.js",
-    "start-frontend": "node build\\frontendserver\\frontendserver.js",
+    "start-frontend": "node build\\frontendserver.js",
     "test": "./node_modules/.bin/mocha"
   },
   "repository": {
@@ -22,7 +22,9 @@
     "url": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment/issues"
   },
   "homepage": "https://github.com/RicardoAzuul/OGD-front-end-developer-assignment#readme",
-  "dependencies": {},
+  "dependencies": {
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "chai": "^4.2.0",
     "mocha": "^8.1.3",

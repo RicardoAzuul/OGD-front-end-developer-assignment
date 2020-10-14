@@ -19,3 +19,9 @@ You are free to use any 3rd party components, but if you do, please
 
 
 Added request module
+
+https://www.digitalocean.com/community/tutorials/how-to-create-a-web-server-in-node-js-with-the-http-module#step-1-%E2%80%94-creating-a-basic-http-server
+
+https://www.c-sharpcorner.com/article/creating-server-and-host-html-page-using-node-js/
+
+https://expressjs.com/en/starter/static-files.html
