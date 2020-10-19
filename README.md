@@ -55,6 +55,27 @@ Explain what these tests test and why
 Give an example
 ```
 
+### Building the webapp
+
+To build the webapp run 
+```
+npm run build
+```
+If you want to build just parts:
+to copy the CSS file to the build directory
+```
+npm run build-css
+```
+to copy the frontendserver and index.html to the build directory
+```
+npm run build-frontendserver 
+```
+to copy the JS file to the build directory
+```
+npm run build-js
+```
+
+
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
