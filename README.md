@@ -1,5 +1,5 @@
 # OGD-front-end-developer-assignment
-A simple webapp that takes JSON data containing bank account info from an API server and displays them on a page.
+A simple webapp that takes JSON data containing bank account info from an API server and displays it on a page.
 
 ## Getting Started
 
