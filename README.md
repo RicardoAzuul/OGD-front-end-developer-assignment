@@ -31,13 +31,7 @@ until finished
 
 End with an example of getting some data out of the system or using it for a little demo
 
-## Running the tests
 
-npm test will run a few tests to see if everything is ready for production:
-- check if the API server is running by seeing if it returns data
-- check if the HTML file is present in the build folder and being served by the Express server by doing an HTTP request for it
-- check if the CSS file is present in the build folder and being served by the Express server by doing an HTTP request for it
-- check if the JS file is present in the build folder and being served by the Express server by doing an HTTP request for it
 
 ### Break down into end to end tests
 
@@ -55,7 +49,7 @@ Explain what these tests test and why
 Give an example
 ```
 
-### Building the webapp
+## Building the webapp
 
 To build the webapp run 
 ```
@@ -75,14 +69,34 @@ to copy the JS file to the build directory
 npm run build-js
 ```
 
+### Running the webapp
 
-## Deployment
+Starting the api 
+```
+npm run start-api
+```
 
-Add additional notes about how to deploy this on a live system
+Starting the frontend server 
+```
+npm run start-frontend
+```
+
+With both servers running you can test the webapp.
+
+## Running the tests
+
+npm test will run a few tests to see if everything is ready for production:
+- check if the API server is running by seeing if it returns data
+- check if the HTML file is present in the build folder and being served by the Express server by doing an HTTP request for it
+- check if the CSS file is present in the build folder and being served by the Express server by doing an HTTP request for it
+- check if the JS file is present in the build folder and being served by the Express server by doing an HTTP request for it
+
+
+
 
 ## Built With
 
-* Express: to easily serve the files needed for the frontend
+* Express: to serve the files needed for the frontend
 * Mocha and Chai: for testing if the app is ready for production
 
 ## Authors
