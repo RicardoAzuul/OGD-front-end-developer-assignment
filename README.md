@@ -92,8 +92,6 @@ npm test will run a few tests to see if everything is ready for production:
 - check if the JS file is present in the build folder and being served by the Express server by doing an HTTP request for it
 
 
-
-
 ## Built With
 
 * Express: to serve the files needed for the frontend
