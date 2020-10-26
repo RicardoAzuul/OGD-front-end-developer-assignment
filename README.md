@@ -1,10 +1,6 @@
 # OGD-front-end-developer-assignment
 A simple webapp that takes JSON data containing bank account info from an API server and displays it on a page.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Contributing
 
 To contribute, change the code in the following files:
@@ -13,22 +9,6 @@ To contribute, change the code in the following files:
 - index.html, in the frontendserver directory of the project
 
 After your changes, run the build command, run the test and then browse to http://localhost:3000 to open the webpage
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
 
 ## Building the webapp
 
